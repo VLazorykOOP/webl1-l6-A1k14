@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uk" style="background-color: #e0f7fa;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Тимчук Тарас Анатолійович">
+    <title>Новини Аптеки "Здорова Родина"</title>
+
+    <style media="screen" lang="en">
+        .highlight-price { color: green; font-weight: bold; }
+        .old-price { color: red; }
+    </style>
+</head>
+
+<body align="center" style="font-family: 'Times New Roman', serif; color: #333;">
+
+    <header style="border-bottom: 2px solid #0056b3; padding-bottom: 10px;" title="Шапка розділу новин">
+        <h1 style="color: #0056b3;">Останні Новини</h1>
+    </header>
+    
+    <section class="news-content" style="max-width: 800px; margin: auto; text-align: left; padding: 15px;">
+
+        <div id="news-article-1" class="article">
+            <h2 style="color: green;">Весняна акція на вітаміни!</h2>
+            <p>
+                Тільки цього тижня! Спеціальна пропозиція на вітамінний комплекс "Енергія<sup class="upper-index" style="color: blue;">+</sup>".
+                Формула препарату містить H<sub id="sub-index" style="font-weight: bold;">2</sub>O та інші корисні компоненти.
+            </p>
+            
+            <p>
+                Стара ціна: 
+                <del class="old-price" lang="uk-UA" datetime="2025-10-17T23:59:59">250 грн</del>.
+                Нова ціна: 
+                <ins id="new-price-1" class="highlight-price" lang="uk-UA">210 грн!</ins>
+            </p>
+
+            <p>
+                Наша аптека: <ruby id="brand-pronunciation" class="ruby-element">Здорова Родина<rt>(Zdorova Rodyna)</rt></ruby>.
+                Зворотний код акції: <bdo lang="en" dir="rtl">SALE2025</bdo>.
+            </p>
+        </div>
+
+        <hr width="100%" size="3">
+        
+        <h3 align="center">Наш новий банер!</h3>
+        <p align="center">
+            <img 
+                src="https://placehold.co/600x150/007bff/white?text=Акція!+Натисни+на+логотип!" 
+                alt="Акційний банер" 
+                width="600" 
+                border="1" 
+                class="news-image" 
+                hspace="5" 
+                name="promo_banner"
+                usemap="#promo_map">
+        </p>
+
+        <map 
+            name="promo_map" 
+            onfocus="this.style.outline='2px solid red';" 
+            onblur="this.style.outline='none';" 
+            href="javascript:void(0);" 
+            tabindex="1" 
+            style="cursor: pointer;">
+            
+            <area 
+                shape="rect" 
+                coords="400,25,580,125" 
+                href="pharmacy.html" 
+                alt="Перейти до товарів"
+                target="_blank"
+                tabindex="2"
+                accesskey="P"
+                class="map-link"
+                onblur="console.log('Area lost focus')">
+        </map>
+
+    </section>
+
+    <aside id="sidebar" class="info-panel" style="max-width: 780px; margin: auto; border: 1px dashed blue; padding: 10px; text-align: left;">
+        <h4>
+            <span id="sidebar-header" style="color: #333;">Корисна інформація</span>
+        </h4>
+        <p>
+            Не забувайте консультуватися з лікарем перед вживанням будь-яких препаратів.
+            Особливо, якщо це супер<wbr id="wbr-example">вітамінний<wbr>комплекс.
+        </p>
+    </aside>
+
+    <hr width="75%" size="3">
+
+    <p style="font-size: 18px;">
+        <a href="pharmacy.html" title="Перейти на сторінку аптеки">&larr; На сторінку аптеки</a>
+    </p>
+    <p style="font-size: 18px;">
+        <a href="author.html" title="Перейти на головну">На сторінку автора</a>
+    </p>
+
+</body>
+</html>
