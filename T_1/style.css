@@ -1,0 +1,174 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #e0f7fa;
+    color: #333;
+    margin: 10px 5%;
+    line-height: normal;
+    direction: ltr;
+    unicode-bidi: normal;
+}
+
+#main-header {
+    border-bottom-color: navy;
+    border-bottom-style: double;
+    border-bottom-width: thin;
+    padding-bottom: 5px;
+}
+
+.page-author h1 {
+    font-family: 'Courier New', monospace;
+    color: green !important;
+}
+
+div p {
+    line-height: 150%;
+}
+
+h2 + p {
+    margin-top: 0;
+}
+
+a[title] {
+    color: #800080;
+}
+
+img[alt="Акційний банер"] {
+    border-style: outset;
+    border-color: blue;
+    border-width: 3px;
+}
+
+span[lang$="UA"] {
+    font-weight: bold;
+}
+
+p:first-child {
+    margin-top: 5px;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+    outline: 1px dashed red;
+    outline-color: red;
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+h3:first-of-type {
+   margin-top: 15px;
+}
+
+input[type="checkbox"]:checked + label {
+  color: green;
+  font-weight: bold;
+}
+input[type="text"]:disabled {
+  background-color: #eee;
+}
+input[type="email"]:invalid {
+  border-color: red;
+}
+
+p::first-line {
+    font-weight: bold;
+    color: #0056b3;
+}
+
+h2::before {
+    content: "🔷 ";
+    color: orange;
+}
+
+.article {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-left: 15px;
+    padding-top: 10px;
+    border-left-width: thin;
+    border-left-style: dashed;
+    border-right-width: 2px;
+    border-top-style: none;
+    border-top-color: black;
+    border-right-color: purple;
+}
+
+.author-page-body {
+    position: static;
+}
+
+.news-image {
+    float: left;
+    margin-right: 15px;
+}
+
+#sidebar {
+    float: none;
+    clear: left;
+    margin-left: 20px;
+    /* display: list-item; */
+    border-style: double;
+    border-width: thin;
+}
+
+.product-attribute {
+    display: list-item;
+}
+caption {
+    display: table-caption;
+}
+
+body {
+    min-width: 400px;
+    max-width: 1200px;
+}
+
+#product-section {
+    min-height: 150px;
+    height: auto;
+}
+
+img[usemap] {
+    vertical-align: bottom;
+}
+
+sup {
+    vertical-align: super;
+}
+
+.news-content {
+    overflow: visible;
+}
+
+.scrollable-div {
+    height: 100px;
+    overflow: scroll;
+    border: 1px solid black;
+}
+
+.hidden-element {
+   visibility: hidden;
+}
+
+.percentage-align {
+    vertical-align: 50%;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+header {
+    background-image: url('https://www.transparenttextures.com/patterns/light-paper-fibers.png');
+    background-position: left bottom;
+    background-attachment: scroll;
+}
+
+.product-title {
+    background-image: url('https://placehold.co/20x20/00ff00/ffffff?text=+');
+    background-repeat: no-repeat;
+    background-position: 5px 10px;
+    padding-left: 30px;
+}
