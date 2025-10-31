@@ -172,3 +172,60 @@ header {
     background-position: 5px 10px;
     padding-left: 30px;
 }
+
+
+ol[type="A"] {
+    list-style-position: inside;
+}
+
+
+ol.custom-counter-list {
+    list-style-type: none; 
+    counter-reset: my-counter 2; 
+}
+
+ol.custom-counter-list li::before {
+    counter-increment: my-counter; 
+    content: counter(my-counter) ". "; 
+    color: blue;
+    font-weight: bold;
+    marker-offset: 5px; 
+}
+
+#main-menu-list {
+    list-style-image: url('https://placehold.co/10x10/007bff/007bff.png');
+    list-style-position: inside; /*  */
+}
+
+.main-categories ul {
+    list-style: square inside none;
+}
+
+.page-nav {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+#main-menu-list li {
+    margin-bottom: 10px;
+}
+
+dl.departments dt {
+    font-weight: bold;
+    color: green;
+    margin-top: 10px;
+}
+
+dl.departments dd {
+    margin-left: 25px;
+}
+
+main {
+    display: block;
+}
+
+menu, command {
+    display: none;
+}

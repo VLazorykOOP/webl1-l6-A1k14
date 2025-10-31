@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk" style="background-color: #e0f7fa;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Тимчук Тарас Анатолійвич">
+    <title>Асортимент - Аптека "Здорова Родина"</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body align="center" style="font-family: 'Times New Roman', serif; color: #333;">
+
+    <marquee id="promo-run" scrollamount="5" width="100%" bgcolor="#FFFFFF" lang="uk">
+        Акційні товари! Знижки до 20% на вітаміни!
+    </marquee>
+
+    <main id="list-page" class="main-content" style="max-width: 800px; margin: auto; text-align: left;">
+        
+        <header>
+            <h1 id="main-header" style="color: #0056b3;">Асортимент Аптеки</h1>
+        </header>
+
+        <nav class="page-nav">
+            <p style="font-size: 18px;">
+                <a href="menu.html" title="Головне меню"><b>ГОЛОВНЕ МЕНЮ</b></a>
+            </p>
+        </nav>
+
+        <h2>Топ-5 Бестселерів (Нумерований список)</h2>
+        
+        <ol type="A" style="background-color: #f0f0f0;" value="3" compact class="custom-counter-list">
+            <li compact class="list-item-1" id="item1" style="color: darkred;">Вітамін D3</li>
+            <li compact class="list-item-2" id="item2" style="color: darkgreen;">Парацетамол</li>
+            <li compact class="list-item-3" id="item3" style="color: darkblue;">Аспірин</li>
+            <li compact class="list-item-4" id="item4" style="color: darkmagenta;">Сироп від кашлю "Бронхо"</li>
+            <li compact class="list-item-5" id="item5" style="color: dimgray;">Гематоген</li>
+        </ol>
+
+        <h2>Категорії товарів (Маркований список)</h2>
+        
+        <ul type="circle" class="main-categories">
+            <li>Лікарські засоби</li>
+            <li>Вітаміни та БАДи
+                <ul type="square">
+                    <li>Для дорослих</li>
+                    <li>Для дітей</li>
+                </ul>
+            </li>
+            <li>Медична техніка</li>
+        </ul>
+
+        <h2>Відділи аптеки (Список визначень)</h2>
+        
+        <dl style="border: 1px dashed blue; padding: 10px;" class="departments">
+            <dt>Рецептурний відділ</dt>
+            <dd title="Відділ рецептурних ліків" class="dep-desc" id="dd1">
+                Відпуск ліків виключно за рецептом лікаря.
+            </dd>
+            
+            <dt>Безрецептурний відділ</dt>
+            <dd title="Відділ безрецептурних ліків" class="dep-desc" id="dd2">
+                Загальнодоступні препарати.
+            </dd>
+            
+            <dt>Відділ оптики</dt>
+            <dd title="Відділ оптики" class="dep-desc" id="dd3">
+                Лінзи, окуляри та розчини.
+            </dd>
+        </dl>
+    </main>
+</body>
+</html>

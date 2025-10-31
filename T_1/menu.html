@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk" style="background-color: #e0f7fa;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Тимчук Тарас Анатолійвич">
+    <title>Меню - Аптека "Здорова Родина"</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
+    <link id="favicon-link" class="util-link" rel="icon" href="favicon.ico" sizes="32x32" media="all">
+</head>
+<body align="center" style="font-family: 'Times New Roman', serif; color: #333;">
+
+    <main id="menu-page" class="main-content" style="max-width: 800px; margin: auto; text-align: left;">
+
+        <header>
+            <h1 id="main-header" style="color: #0056b3;">Меню Сайту</h1>
+        </header>
+        
+        <marquee id="menu-marquee" scrollamount="3" width="50%" bgcolor="#FFFFCC" lang="uk">
+            Головна навігація
+        </marquee>
+
+        <nav class="page-nav" style="text-align: center; padding: 20px;">
+            <ul id="main-menu-list">
+                <li>
+                    <a id="link-author" href="author.html" type="text/html" title="Сторінка автора">Сторінка автора</a>
+                </li>
+                <li>
+                    <a id="link-pharm" href="pharmacy.html" type="text/html" title="Про аптеку" shape="rect" coords="0,0,0,0">Про аптеку</a>
+                </li>
+                <li>
+                    <a id="link-news" href="news.html" type="text/html" title="Новини">Новини</a>
+                </li>
+                <li>
+                    <a id="link-lists" href="lists.html" type="text/html" title="Асортимент">Асортимент товарів</a>
+                </li>
+                <li>
+                    <a id="link-internal" href="#footer" type="text/html" title="До низу сторінки">Внутрішнє посилання (вниз)</a>
+                </li>
+            </ul>
+        </nav>
+
+        <menu id="context-menu" label="Додаткові дії" style="display: none;">
+            <command id="cmd-print" style="display:none;" title="Друк сторінки">Друк</command>
+            <command id="cmd-reload" style="display:none;" title="Оновити">Оновити</command>
+        </menu>
+
+        <div style="height: 500px; padding-top: 50px;">
+            <p>Простір для демонстрації прокрутки внутрішнього посилання.</p>
+        </div>
+
+        <footer id="footer">
+            <p>Це підвал сторінки. @ 2024</p>
+        </footer>
+    </main>
+</body>
+</html>
