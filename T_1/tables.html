@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="uk" style="background-color: #e0f7fa;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Тимчук Тарас Анатолійович">
+    <title>Таблиці - Аптека "Здорова Родина"</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body align="center" style="font-family: 'Times New Roman', serif; color: #333;">
+
+    <main id="table-page" class="main-content" style="max-width: 900px; margin: auto; text-align: left;">
+
+        <header>
+            <h1 id="main-header" style="color: #0056b3;">Інформація про товари</h1>
+        </header>
+        
+        <nav class="page-nav">
+            <p style="font-size: 18px; text-align: center;">
+                <a href="menu.html" title="Головне меню"><b>ГОЛОВНЕ МЕНЮ</b></a>
+            </p>
+        </nav>
+
+        <h2>Графік чергувань</h2>
+        <table class="geometric-table">
+          <caption>Графік чергувань провізорів</caption>
+          <tr>
+            <td rowspan="2">Зміна A</td>
+            <td colspan="3">Дні тижня</td>
+          </tr>
+          <tr>
+            <td>Понеділок</td>
+            <td>Середа</td>
+            <td>П'ятниця</td>
+          </tr>
+          <tr>
+            <td>Провізор</td>
+            <td colspan="2">Петренко В.О.</td>
+            <td>Сидоренко А.П.</td>
+          </tr>
+          <tr>
+            <td rowspan="2">Зміна B</td>
+            <td colspan="3">Дні тижня</td>
+          </tr>
+          <tr>
+            <td>Вівторок</td>
+            <td>Четвер</td>
+            <td>Субота</td>
+          </tr>
+          <tr>
+            <td>Провізор</td>
+            <td colspan="2">Іваненко Г.Л.</td>
+            <td>Данилюк О.Р.</td>
+          </tr>
+        </table>
+
+        <hr>
+
+        <h2>Прайс-лист</h2>
+        
+        <table class="product-table" 
+               summary="Прайс-лист на основні товари аптеки" 
+               rules="all" 
+               border="1" 
+               cellpadding="10" 
+               cellspacing="5">
+            
+            <caption title="Прайс-лист" class="table-caption-main">
+                Прайс-лист на товари
+            </caption>
+
+            <colgroup>
+                <col class="col-name" lang="uk-UA">
+                <col class="col-manufacturer" lang="en">
+                <col class="col-price" lang="uk-UA">
+            </colgroup>
+            
+            <thead>
+                <tr valign="top" style="background-color: #ddd;" title="Заголовок таблиці" lang="uk">
+                    <th axis="product" id="th-name" class="th-main" style="width: 50%;">Назва Товару</th>
+                    <th axis="manufacturer" id="th-manuf" class="th-main" style="width: 25%;">Виробник</th>
+                    <th axis="price" id="th-price" class="th-main" style="width: 25%;">Ціна, грн</th>
+                </tr>
+            </thead>
+            
+            <tfoot title="Підсумок" align="right" char="." lang="uk" charoff="0">
+                <tr>
+                    <th id="th-total" class="th-main" style="text-align: right;" colspan="2">Всього:</th>
+                    <td class="total-price" lang="uk" dir="ltr" align="left">665.00</td>
+                </tr>
+            </tfoot>
+            
+            <tbody>
+                <tr valign="middle" style="border-bottom: 1px solid black;" title="Рядок товару 1" lang="uk">
+                    <td class="cell-name" lang="uk" dir="ltr" align="left">Вітамін D3</td>
+                    <td class="cell-manuf" lang="en" dir="ltr" align="left">Solgar</td>
+                    <td class="cell-price" lang="uk" dir="ltr" align="right">350.00</td>
+                </tr>
+                <tr valign="middle" style="border-bottom: 1px solid black;" title="Рядок товару 2" lang="uk">
+                    <td class="cell-name" lang="uk" dir="ltr" align="left">Парацетамол</td>
+                    <td class="cell-manuf" lang="uk" dir="ltr" align="left">Дарниця</td>
+                    <td class="cell-price" lang="uk" dir="ltr" align="right">15.00</td>
+                </tr>
+                <tr valign="middle" style="border-bottom: 1px solid black;" title="Рядок товару 3" lang="uk">
+                    <td class="cell-name" lang="uk" dir="ltr" align="left">Аспірин</td>
+                    <td class="cell-manuf" lang="de" dir="ltr" align="left">Bayer</td>
+                    <td class="cell-price" lang="uk" dir="ltr" align="right">300.00</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </main>
+</body>
+</html>

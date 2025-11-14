@@ -108,7 +108,6 @@ h2::before {
     float: none;
     clear: left;
     margin-left: 20px;
-    /* display: list-item; */
     border-style: double;
     border-width: thin;
 }
@@ -173,20 +172,18 @@ header {
     padding-left: 30px;
 }
 
-
 ol[type="A"] {
     list-style-position: inside;
 }
 
-
 ol.custom-counter-list {
-    list-style-type: none; 
-    counter-reset: my-counter 2; 
+    list-style-type: none;
+    counter-reset: my-counter 2;
 }
 
 ol.custom-counter-list li::before {
-    counter-increment: my-counter; 
-    content: counter(my-counter) ". "; 
+    counter-increment: my-counter;
+    content: counter(my-counter) ". ";
     color: blue;
     font-weight: bold;
     marker-offset: 5px; 
@@ -194,7 +191,7 @@ ol.custom-counter-list li::before {
 
 #main-menu-list {
     list-style-image: url('https://placehold.co/10x10/007bff/007bff.png');
-    list-style-position: inside; /*  */
+    list-style-position: inside;
 }
 
 .main-categories ul {
@@ -228,4 +225,87 @@ main {
 
 menu, command {
     display: none;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: table;
+    table-layout: auto;
+}
+
+caption {
+    display: table-caption;
+    caption-side: top;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #0056b3;
+    padding-bottom: 10px;
+}
+
+th, td {
+    display: table-cell;
+    padding: 8px;
+    border: 1px solid #0056b3;
+    text-align: left;
+    vertical-align: top;
+}
+
+thead, tbody, tfoot {
+    display: table-row-group;
+}
+thead {
+    display: table-header-group;
+    background-color: #cce7ff;
+}
+tfoot {
+    display: table-footer-group;
+    background-color: #ddd;
+    font-weight: bold;
+}
+tr {
+    display: table-row;
+}
+col {
+    display: table-column;
+}
+colgroup {
+    display: table-column-group;
+}
+
+.product-table {
+    border-collapse: separate;
+    border-spacing: 2px;
+    empty-cells: show;
+    border: 2px solid blue;
+}
+
+.product-table th, .product-table td {
+    text-align: left;
+    vertical-align: middle;
+}
+
+.product-table tfoot[align="right"] {
+    text-align: right;
+}
+
+.product-table td[align="right"] {
+    text-align: right;
+}
+
+.geometric-table {
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+}
+.geometric-table td {
+    border: 1px solid black;
+    padding: 10px;
+    vertical-align: middle;
+    height: 40px;
+}
+.geometric-table tr:nth-child(odd) {
+    background-color: #f0f0f0;
 }
