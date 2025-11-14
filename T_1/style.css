@@ -227,6 +227,7 @@ menu, command {
     display: none;
 }
 
+/*lab 4*/
 table {
     width: 100%;
     margin-bottom: 20px;
@@ -308,4 +309,172 @@ colgroup {
 }
 .geometric-table tr:nth-child(odd) {
     background-color: #f0f0f0;
+}
+
+/* LAB 5*/
+/* Шрифти*/
+#form-page h1 {
+    font-family: fantasy, Geneva, sans-serif;
+}
+.form-group legend {
+    font-family: Calibri, 'Lucida Sans Regular', sans-serif;
+}
+.form-group label {
+    font-family: 'Lucida Sans Unicode', Geneva, sans-serif;
+}
+
+.form-group legend {
+    font-weight: bold;
+}
+#main-header {
+    font-weight: 900;
+}
+
+.form-group label {
+    font-size: 14px;
+}
+
+.summary-class {
+    font-variant: small-caps;
+}
+
+.page-nav {
+    font: menu;
+}
+
+.output-class {
+    font-style: normal;
+}
+
+#contact-legend { 
+    font-stretch: condensed; 
+}
+#details-sum { 
+    font-stretch: extra-expanded; 
+}
+.total-price { 
+    font-stretch: extra-condensed; 
+}
+
+/* текст */
+.summary-class + p {
+    text-indent: 5%;
+}
+
+#link-form:hover {
+    text-decoration: underline;
+}
+
+label[for="phone"] {
+    text-align: right;
+    display: block; 
+    padding-right: 10px;
+}
+
+textarea[name="comments"] {
+    white-space: pre;
+}
+
+.form-group {
+    word-spacing: 2px;
+}
+ /* Пристрої */
+@media print {
+    @page {
+        size: portrait; 
+        marks: none; 
+    }
+    h1 {
+        page-break-before: always; 
+    }
+    .product-table {
+        page-break-after: always;
+    }
+    p {
+        widows: 3; 
+        orphans: 3;
+    }
+}
+
+/* Звук */
+@media aural {
+    body { 
+        volume: soft; 
+    }
+    h1 { 
+        volume: silent; 
+        play-during: url("beep.wav") mix repeat;
+        pause-before: 10ms; 
+        pause-after: 20ms; 
+        cue-before: url("intro.wav"); 
+        azimuth: right; 
+        elevation: level; 
+        speech-rate: fast; 
+        pitch-range: 50; 
+        richness: 70; 
+        pitch: x-low; 
+        speak: spell-out; 
+        speak-punctuation: code; 
+    }
+    h2 {
+        speech-rate: x-fast; 
+    }
+}
+
+.form-group {
+    border: 2px dashed #0056b3;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f0f8ff;
+}
+.form-group legend {
+    padding: 0 5px;
+    font-size: 1.1em;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.form-group input, 
+.form-group textarea, 
+.form-group select,
+.form-group datalist {
+    width: 95%;
+    padding: 5px;
+    font-family: 'Lucida Sans Unicode', Geneva, sans-serif;
+}
+input[type="reset"], 
+input[type="submit"], 
+button {
+    width: auto;
+    padding: 5px 15px;
+    background-color: #ddd;
+    border: 1px solid #aaa;
+    cursor: pointer;
+    margin: 10px 5px 0 0;
+}
+input[type="reset"]:hover, 
+input[type="submit"]:hover, 
+button:hover {
+    background-color: #ccc;
+}
+input:disabled, 
+textarea:disabled, 
+button:disabled, 
+optgroup:disabled {
+    background-color: #eee;
+    color: #999;
+    cursor: not-allowed;
+}
+input[type="color"] {
+    height: 30px;
+    padding: 0;
+}
+.summary-class {
+    cursor: pointer;
+    font-weight: bold;
+}
+.form-buttons {
+    text-align: center;
 }

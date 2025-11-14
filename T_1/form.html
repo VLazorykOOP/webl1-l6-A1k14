@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="uk" style="background-color: #e0f7fa;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Тимчук Тарас Анатолійович">
+    <title>Форма замовлення - Аптека "Здорова Родина"</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body align="center" style="font-family: 'Times New Roman', serif; color: #333;">
+
+    <main id="form-page" class="main-content" style="max-width: 800px; margin: auto; text-align: left;">
+        
+        <header>
+            <h1 id="main-header" style="color: #0056b3;">Форма замовлення ліків</h1>
+        </header>
+        
+        <nav class="page-nav">
+            <p style="font-size: 18px; text-align: center;">
+                <a href="menu.html" title="Головне меню"><b>ГОЛОВНЕ МЕНЮ</b></a>
+            </p>
+        </nav>
+
+        <form id="orderForm" 
+              method="post" 
+              action="#" 
+              enctype="multipart/form-data" 
+              accept-charset="UTF-8" 
+              target="_self" 
+              accept="image/png,image/jpeg">
+
+            <fieldset id="contact-info" class="form-group" lang="uk">
+                <legend id="contact-legend" title="Контактна інформація" style="color: blue;">Контактна інформація</legend>
+
+                <label for="phone">Телефон <em>*</em></label>
+                <input type="tel" name="phone" id="phone" size="20" required autofocus dirname="phone_dir" placeholder="+380...">
+                
+                <label for="pass">Пароль (для знижки) <em>*</em></label>
+                <input type="password" name="pass" id="pass" size="20" required>
+            </fieldset>
+
+            <fieldset id="order-details" class="form-group" lang="uk">
+                <legend id="order-legend" title="Деталі замовлення" style="color: green;">Деталі замовлення</legend>
+                
+                <label for="meds">Виберіть препарат:</label>
+                <select name="medication" id="meds" required>
+                    <optgroup label="Вітаміни" dir="ltr" lang="uk" disabled>
+                        <option value="vitD" label="Вітамін D" dir="ltr" selected>Вітамін D3 (Вимкнено)</option>
+                    </optgroup>
+                    <optgroup label="Знеболюючі" dir="ltr" lang="uk">
+                        <option value="para" label="Парацетамол" dir="ltr">Парацетамол</option>
+                        <option value="aspirin" label="Аспірин" dir="ltr">Аспірин</option>
+                    </optgroup>
+                </select>
+
+                <label for="med_list">Або введіть назву:</label>
+                <input name="med_list" id="med_list" list="datalist-meds">
+                <datalist id="datalist-meds" title="Список ліків" dir="ltr">
+                    <option value="Ібупрофен">
+                    <option value="Но-шпа">
+                    <option value="Німесил">
+                </datalist>
+
+                <label for="recipe">Завантажити рецепт (якщо потрібно):</label>
+                <input type="file" name="recipe" id="recipe" accept="image/*" multiple>
+
+                <label for="pickup_week">Бажаний тиждень отримання:</label>
+                <input type="week" name="pickup_week" id="pickup_week">
+                
+                <label for="favcolor">Ваш улюблений колір (для акції):</label>
+                <input type="color" name="favcolor" id="favcolor" value="#00ff00">
+
+                <label for="old_datetime">Застаріле поле дати:</label>
+                <input type="datetime" name="old_datetime" id="old_datetime">
+            </fieldset>
+
+            <fieldset id="other-info" class="form-group" lang="uk">
+                <legend id="other-legend" title="Додатково" style="color: purple;">Додатково</legend>
+
+                <label for="comments">Коментарі (вимкнено):</label>
+                <textarea name="comments" id="comments" cols="30" rows="4" maxlength="100" autofocus disabled dirname="comments_dir" form="orderForm">
+                    Це поле вимкнене.
+                </textarea>
+
+                <details open>
+                    <summary id="details-sum" class="summary-class" lang="uk">Деталі доставки (натисніть)</summary>
+                    <p>Доставка здійснюється кур'єром Нової Пошти.</p>
+                </details>
+
+                <label for="progress-bar">Статус заповнення:</label>
+                <progress id="progress-bar" class="progress-class" value="50" max="100"></progress>
+                
+                <label>Результат (output):</label>
+                <output name="calc_output" dir="ltr" lang="uk" class="output-class">50%</output>
+            </fieldset>
+
+            <div class="form-buttons">
+                <button type="submit" id="submit-btn" form="orderForm" disabled formnovalidate="formnovalidate" formmethod="post">
+                    Відправити (Вимкнено)
+                </button>
+                
+                <input type="submit" value="Відправити в нове вікно" id="submit-alt" 
+                       formaction="#" formmethod="get" formtarget="_blank" height="40" style="height: 40px;">
+                
+                <input type="reset" value="Скинути форму">
+            </div>
+        </form>
+    </main>
+</body>
+</html>
