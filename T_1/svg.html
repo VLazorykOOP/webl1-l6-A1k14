@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk" style="background-color: #e0f7fa;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Тимчук Тарас Анатолійович">
+    <title>SVG Графіка - Аптека "Здорова Родина"</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body align="center" style="font-family: 'Times New Roman', serif; color: #333;">
+
+    <main id="svg-page" class="main-content" style="max-width: 900px; margin: auto; text-align: left;">
+
+        <header>
+            <h1 id="main-header" style="color: #0056b3;">Лабораторна робота №6: SVG Графіка</h1>
+        </header>
+        
+        <nav class="page-nav">
+            <p style="font-size: 18px; text-align: center;">
+                <a href="menu.html" title="Головне меню"><b>ГОЛОВНЕ МЕНЮ</b></a>
+            </p>
+        </nav>
+
+        <h2>Статичне та анімоване зображення (Варіант 7)</h2>
+        <p>Наступний малюнок створено за допомогою SVG та містить анімацію :</p>
+
+        <svg width="600" height="400" viewBox="-300 -200 600 400" style="border: 1px solid black; background-color: #fff;">
+            
+            <defs>
+                <path id="curve" d="M -250 150 Q 0 250 250 150" fill="none" />
+                
+                <symbol id="arrowhead">
+                    <polygon points="0 0, -10 -5, -10 5" fill="#333" />
+                </symbol>
+            </defs>
+
+            <g class="axes">
+                <line x1="-300" y1="0" x2="300" y2="0" />
+                <line x1="0" y1="-200" x2="0" y2="200" />
+                <use xlink:href="#arrowhead" x="300" y="0" />
+                <use xlink:href="#arrowhead" x="0" y="-200" transform="rotate(-90 0 -200)" />
+            </g>
+
+            <polygon class="svg-shape" points="-200,50 -100,50 -150,150" />
+
+            <circle id="circle1" class="svg-shape" cx="-150" cy="-100" r="50">
+                <animate attributeName="fill" values="#ff0000;#00ff00;#0000ff;#ff0000" dur="10s" repeatCount="indefinite" />
+                <animateTransform attributeName="transform" type="rotate" from="0 -150 -100" to="360 -150 -100" dur="10s" repeatCount="indefinite" />
+            </circle>
+
+            <rect id="rect1" class="svg-shape" x="100" y="-150" width="150" height="75">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 50" begin="0s" dur="5s" repeatCount="indefinite" additive="sum" />
+                <animateTransform attributeName="transform" type="skewX" from="0" to="30" begin="0s" dur="5s" repeatCount="indefinite" additive="sum" />
+            </rect>
+
+            <circle id="circle2" class="svg-shape" cx="200" cy="100" r="50">
+                <animate attributeName="r" values="50;60;50" dur="2s" repeatCount="indefinite" />
+            </circle>
+
+            <text class="curved-text">
+                <textPath xlink:href="#curve">
+                    Аптека "Здорова Родина" - Лабораторна робота №6
+                </textPath>
+            </text>
+
+            <desc>Статичний малюнок з варіанту 7 з анімацією</desc>
+        </svg>
+
+        <h2>Вбудовування контенту (Теги <iframe>, <object>, <embed>)</h2>
+        
+        <h3>Приклад <iframe> (завантажує `author.html`)</h3>
+        <iframe src="author.html" width="100%" height="200" class="embed-frame"></iframe>
+
+        <h3>Приклад &lt;object&gt; (завантажує `lists.html`)</h3>
+        <object type="text/html" data="lists.html" width="100%" height="200" class="embed-frame">
+            Ваш браузер не підтримує тег object.
+        </object>
+
+        <h3>Приклад &lt;embed&gt; (завантажує `news.html`)</h3>
+        <embed src="news.html" type="text/html" width="100%" height="200" class="embed-frame">
+        
+    </main>
+</body>
+</html>
