@@ -506,3 +506,42 @@ input[type="color"] {
     margin-top: 10px;
     margin-bottom: 20px;
 }
+
+/* ========== STYLES FOR LAB 7 ========== */
+
+.task-section {
+    border: 1px solid #0056b3;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.task-section h2 {
+    margin-top: 0;
+    color: #0056b3;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+textarea {
+    width: 100%;
+    font-family: monospace;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+input[type="button"] {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+input[type="button"]:hover {
+    background-color: #004494;
+}

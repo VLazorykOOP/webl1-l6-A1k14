@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uk" style="background-color: #e0f7fa;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta name="Author" content="Тимчук Тарас Анатолійвич">
+    <title>JavaScript - Всі 6 Завдань</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="script.js"></script>
+</head>
+
+<body align="center" style="font-family: 'Times New Roman', serif; color: #333;" 
+      onload="bodyLoadHandler()" 
+      onresize="bodyResizeHandler()">
+
+    <main id="js-page" class="main-content" style="max-width: 900px; margin: auto; text-align: left;">
+
+        <nav class="page-nav" style="text-align: center; margin-bottom: 20px;">
+            <a href="menu.html" title="Головне меню"><b>&larr; ПОВЕРНУТИСЯ В МЕНЮ</b></a>
+        </nav>
+
+        <section class="task-section" style="border: 2px solid #0056b3;">
+            <h2>Завдання 2: Події тегів (Клікніть по заголовку)</h2>
+            <h1 id="main-header" style="color: #0056b3; cursor: pointer; text-align: center; border: 1px dashed grey; padding: 10px;" 
+                onclick="headerClickHandler(this)" 
+                onmouseover="headerMouseOverHandler(this)"
+                onmouseout="headerMouseOutHandler(this)">
+                Лабораторна робота №7
+            </h1>
+            <p style="text-align: center; font-size: 12px; color: grey;">(Спробуйте навести мишку або клікнути на текст вище)</p>
+        </section>
+
+        <section class="task-section">
+            <h2>Завдання 1: Події вікна (onload, onresize)</h2>
+            <p>Спробуйте змінити розмір вікна браузера. Результат з'явиться нижче:</p>
+            <textarea id="task1-output" rows="2" cols="80" readonly style="color: green;">Очікування події...</textarea>
+        </section>
+
+        <section class="task-section">
+            <h2>Завдання 3: Інформація (Вар. 19 - images)</h2>
+            <p>Натисніть кнопку, щоб отримати інформацію про всі картинки на цій сторінці.</p>
+            <input type="button" value="Вивести масив images" onclick="showImagesInfo()">
+            <br><br>
+            <textarea id="info-output" rows="4" cols="80"></textarea>
+        </section>
+
+        <section class="task-section">
+            <h2>Завдання 4: Події миші (Наведіть на картинки)</h2>
+            <div style="display: flex; gap: 20px; justify-content: center; padding: 10px;">
+                <img src="https://placehold.co/80x80/red/white?text=Img1" name="img1" alt="Червоний квадрат" 
+                     onmouseover="imgMouseOver(this)" onmouseout="imgMouseOut(this)"
+                     style="transition: 0.3s;">
+                
+                <img src="https://placehold.co/80x80/green/white?text=Img2" name="img2" alt="Зелений квадрат" 
+                     onmouseover="imgMouseOver(this)" onmouseout="imgMouseOut(this)"
+                     style="transition: 0.3s;">
+                
+                <img src="https://placehold.co/80x80/blue/white?text=Img3" name="img3" alt="Синій квадрат" 
+                     onmouseover="imgMouseOver(this)" onmouseout="imgMouseOut(this)"
+                     style="transition: 0.3s;">
+            </div>
+        </section>
+
+        <section class="task-section">
+            <h2>Завдання 5: Регулярні вирази (Вар. 19 - "к...о")</h2>
+            <p>Знайти слова, що починаються на <b>"к"</b> і закінчуються на <b>"о"</b>.</p>
+            <form name="regexForm">
+                <textarea id="regex-input" rows="2" cols="80">Ми пішли в кіно, через вікно світило сонце, пили какао.</textarea>
+                <br><br>
+                <input type="button" value="Знайти слова" onclick="processRegexTask()">
+                <span id="regex-result" style="margin-left: 10px; font-weight: bold; color: #0056b3;"></span>
+            </form>
+        </section>
+
+        <section class="task-section">
+            <h2>Завдання 6: Масиви (Вар. 19 - Від'ємні числа)</h2>
+            <p>Побудувати масив B з усіх від'ємних елементів масиву A.</p>
+            <form name="arrayForm">
+                <input type="text" id="array-input" value="10, -5, 3, -12, 0, 8, -1, -50" size="60">
+                <br><br>
+                <input type="button" value="Обробити масив" onclick="processArrayTask()">
+                <br><br>
+                <textarea id="array-output" rows="3" cols="80"></textarea>
+            </form>
+        </section>
+
+    </main>
+</body>
+</html>

@@ -19,55 +19,86 @@
                 <a href="menu.html" title="Головне меню"><b>ГОЛОВНЕ МЕНЮ</b></a>
             </p>
         </nav>
+  
+        <h2>Малюнок за Варіантом №7</h2>
 
-        <h2>Статичне та анімоване зображення (Варіант 7)</h2>
-        <p>Наступний малюнок створено за допомогою SVG та містить анімацію :</p>
-
-        <svg width="600" height="400" viewBox="-300 -200 600 400" style="border: 1px solid black; background-color: #fff;">
+        <svg width="500" height="500" viewBox="0 0 500 500" style="border: 1px solid black; background-color: #fff; margin: auto; display: block;">
             
             <defs>
-                <path id="curve" d="M -250 150 Q 0 250 250 150" fill="none" />
-                
-                <symbol id="arrowhead">
-                    <polygon points="0 0, -10 -5, -10 5" fill="#333" />
-                </symbol>
+                <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+                    <path d="M0,0 L0,6 L9,3 z" fill="#000" />
+                </marker>
+                <path id="textCurve" d="M 50 450 Q 250 350 450 450" fill="none"/>
             </defs>
 
-            <g class="axes">
-                <line x1="-300" y1="0" x2="300" y2="0" />
-                <line x1="0" y1="-200" x2="0" y2="200" />
-                <use xlink:href="#arrowhead" x="300" y="0" />
-                <use xlink:href="#arrowhead" x="0" y="-200" transform="rotate(-90 0 -200)" />
+            <g stroke="black" stroke-width="1">
+                <line x1="20" y1="250" x2="480" y2="250" marker-end="url(#arrow)" />
+                <line x1="50" y1="480" x2="50" y2="20" marker-end="url(#arrow)" />
+                
+                <text x="470" y="280" font-family="Arial" font-size="16">X</text>
+                <text x="20" y="30" font-family="Arial" font-size="16">Y</text>
+
+                <line x1="50" y1="245" x2="50" y2="255" />
+                <text x="45" y="270" font-size="12">0</text>
+                <line x1="90" y1="245" x2="90" y2="255" />
+                <text x="85" y="270" font-size="12">1</text>
+                <line x1="130" y1="245" x2="130" y2="255" />
+                <text x="125" y="270" font-size="12">2</text>
+                <line x1="170" y1="245" x2="170" y2="255" />
+                <text x="165" y="270" font-size="12">3</text>
+                <line x1="210" y1="245" x2="210" y2="255" />
+                <text x="205" y="270" font-size="12">4</text>
+                <line x1="250" y1="245" x2="250" y2="255" />
+                <text x="245" y="270" font-size="12">5</text>
+
+                <line x1="45" y1="330" x2="55" y2="330" /> <text x="25" y="335" font-size="12">-2</text>
+                <line x1="45" y1="290" x2="55" y2="290" /> <text x="25" y="295" font-size="12">-1</text>
+                <line x1="45" y1="210" x2="55" y2="210" /> <text x="30" y="215" font-size="12">1</text>
+                <line x1="45" y1="170" x2="55" y2="170" /> <text x="30" y="175" font-size="12">2</text>
             </g>
 
-            <polygon class="svg-shape" points="-200,50 -100,50 -150,150" />
+            <ellipse cx="170" cy="190" rx="80" ry="20" fill="blue" stroke="black">
+                 <animate attributeName="rx" values="80;90;80" dur="2s" repeatCount="indefinite" />
+            </ellipse>
 
-            <circle id="circle1" class="svg-shape" cx="-150" cy="-100" r="50">
-                <animate attributeName="fill" values="#ff0000;#00ff00;#0000ff;#ff0000" dur="10s" repeatCount="indefinite" />
-                <animateTransform attributeName="transform" type="rotate" from="0 -150 -100" to="360 -150 -100" dur="10s" repeatCount="indefinite" />
+            <circle cx="130" cy="270" r="40" fill="blue" stroke="black">
+                <animateTransform attributeName="transform" type="rotate" from="0 130 270" to="360 130 270" dur="5s" repeatCount="indefinite" />
+                <line x1="130" y1="270" x2="130" y2="230" stroke="white" stroke-width="2" />
             </circle>
 
-            <rect id="rect1" class="svg-shape" x="100" y="-150" width="150" height="75">
-                <animateTransform attributeName="transform" type="translate" from="0 0" to="0 50" begin="0s" dur="5s" repeatCount="indefinite" additive="sum" />
-                <animateTransform attributeName="transform" type="skewX" from="0" to="30" begin="0s" dur="5s" repeatCount="indefinite" additive="sum" />
+            <circle cx="210" cy="270" r="40" fill="blue" stroke="black" />
+
+            <rect x="90" y="130" width="40" height="40" fill="blue" stroke="black">
+                <animate attributeName="fill" values="blue;red;yellow;blue" dur="4s" repeatCount="indefinite" />
             </rect>
 
-            <circle id="circle2" class="svg-shape" cx="200" cy="100" r="50">
-                <animate attributeName="r" values="50;60;50" dur="2s" repeatCount="indefinite" />
-            </circle>
+            <rect x="210" y="130" width="40" height="40" fill="blue" stroke="black">
+                <animateTransform attributeName="transform" type="skewX" values="0;20;0;-20;0" dur="3s" repeatCount="indefinite" />
+            </rect>
 
-            <text class="curved-text">
-                <textPath xlink:href="#curve">
-                    Аптека "Здорова Родина" - Лабораторна робота №6
+            <rect x="50" y="170" width="40" height="40" fill="blue" stroke="black" />
+
+            <rect x="250" y="170" width="40" height="40" fill="blue" stroke="black" />
+
+            <rect x="50" y="290" width="40" height="40" fill="blue" stroke="black" />
+
+            <rect x="250" y="290" width="40" height="40" fill="blue" stroke="black" />
+
+            <rect x="130" y="330" width="80" height="40" fill="blue" stroke="black">
+                <animateTransform attributeName="transform" type="translate" values="0,0; 0,20; 0,0" dur="2s" repeatCount="indefinite" />
+            </rect>
+
+            <text font-family="Verdana" font-size="14" fill="navy" font-weight="bold">
+                <textPath xlink:href="#textCurve" startOffset="20%">
+                    Графічний об'єкт
                 </textPath>
             </text>
 
-            <desc>Статичний малюнок з варіанту 7 з анімацією</desc>
         </svg>
 
-        <h2>Вбудовування контенту (Теги <iframe>, <object>, <embed>)</h2>
+        <h2>Вбудовування контенту</h2>
         
-        <h3>Приклад <iframe> (завантажує `author.html`)</h3>
+        <h3>Приклад &lt;iframe&gt; (завантажує `author.html`)</h3>
         <iframe src="author.html" width="100%" height="200" class="embed-frame"></iframe>
 
         <h3>Приклад &lt;object&gt; (завантажує `lists.html`)</h3>
